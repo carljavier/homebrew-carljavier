@@ -12,7 +12,8 @@ Allows for private packages to be easily distributed to people's laptops
 
 `$ brew tap carljavier/apps git@github.com:carljavier/homebrew-carljavier.git`
 
-
+### Uninstall
+`$ brew untap carljavier/apps` 
 
 ## Available Formulas
 
@@ -22,3 +23,5 @@ Allows for private packages to be easily distributed to people's laptops
 CLI tool for [tfm](https://github.com/hashicorp-services/tfm)
 
 `$ brew install carljavier/apps/tfm`
+
+`$ brew uninstall carljavier/apps/tfm`
