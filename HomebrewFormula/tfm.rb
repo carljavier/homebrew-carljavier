@@ -14,7 +14,7 @@ class Tfm < Formula
       end
       ENV["GOPATH"] = HOMEBREW_CACHE/"go_cache"
       go_ldflags = "-w -s"
-      go_ldflags << " -X 'github.com/hashicorp-services/tfm/version.Version=#{v_version}'"
+      go_ldflags << " -X 'github.com/hashicorp-services/tfm/version.Version=#{version}'"
       go_ldflags << " -X 'github.com/hashicorp-services/tfm/version.BuiltBy=HomeBrew'"
       system "go", "build", "-trimpath", "-ldflags", go_ldflags, "-o", bin/"tfm"
     end
