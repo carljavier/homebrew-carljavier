@@ -1,7 +1,7 @@
 class Tfm < Formula
     desc "tfm cli -- Command Line Interface to migrate TFE workspace to TFC"
     homepage "https://github.com/hashicorp-services/tfm"
-    url "git@github.com:hashicorp-services/tfm.git", :using => :git, :tag => "0.0.2-pre-alpha"
+    url "git@github.com:hashicorp-services/tfm.git", :using => :git, :tag => "0.0.5-pre-alpha"
     head "git@github.com:hashicorp-services/tfm.git", :using => :git, :branch => "main"
     version '0.0.2-pre-alpha'
   
