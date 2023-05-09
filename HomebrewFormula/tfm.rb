@@ -3,7 +3,7 @@ class Tfm < Formula
     homepage "https://github.com/hashicorp-services/tfm"
     url "git@github.com:hashicorp-services/tfm.git", :using => :git, :tag => "0.0.5-pre-alpha"
     head "git@github.com:hashicorp-services/tfm.git", :using => :git, :branch => "main"
-    version '0.0.2-pre-alpha'
+    version '0.0.5-pre-alpha'
   
     depends_on "go" => :build
   
