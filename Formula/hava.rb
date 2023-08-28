@@ -5,21 +5,21 @@
 class Hava < Formula
   desc "hava is a Go CLI tool to interact with app.hava.io platform."
   homepage "https://github.com/carljavier/hava"
-  version "0.0.1"
+  version "0.0.2-beta"
   license "Apache-2.0"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/carljavier/hava/releases/download/0.0.1/hava_Darwin_x86_64.tar.gz"
-      sha256 "60b4770e328553f64a2b2d631b8659ee8cb8e22b4afd66867529488b6f6d6f11"
+    if Hardware::CPU.arm?
+      url "https://github.com/carljavier/hava/releases/download/0.0.2-beta/hava_Darwin_arm64.tar.gz"
+      sha256 "151c8d3927a6e16f0e5a693554e65219cc428bab84def291b1c2c445c7897f59"
 
       def install
         bin.install "hava"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/carljavier/hava/releases/download/0.0.1/hava_Darwin_arm64.tar.gz"
-      sha256 "fb8c8d88a313730589e2d3ed61c6662bcf1896aaa5cb8dc679dd3aa7ef4e5482"
+    if Hardware::CPU.intel?
+      url "https://github.com/carljavier/hava/releases/download/0.0.2-beta/hava_Darwin_x86_64.tar.gz"
+      sha256 "95c42668bc4d5ad5b790fc09533acf4cb01277c2fe114a8cef10e950f129096c"
 
       def install
         bin.install "hava"
@@ -29,16 +29,16 @@ class Hava < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/carljavier/hava/releases/download/0.0.1/hava_Linux_arm64.tar.gz"
-      sha256 "8b59f853ef326c3492cde6ac55d6ef4d9c6ec61ed02f9cfa2f1e01d1663b57f9"
+      url "https://github.com/carljavier/hava/releases/download/0.0.2-beta/hava_Linux_arm64.tar.gz"
+      sha256 "fb1000660b87a45757ddff8a2fbc98850142c0345faad3ed04dbae2a90af80b0"
 
       def install
         bin.install "hava"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/carljavier/hava/releases/download/0.0.1/hava_Linux_x86_64.tar.gz"
-      sha256 "227b0e6286fe68ddc128555a009e377621c2287d8e72ead770b85617cb4eac2e"
+      url "https://github.com/carljavier/hava/releases/download/0.0.2-beta/hava_Linux_x86_64.tar.gz"
+      sha256 "068b0f9c54dfddc0c87fd86e3f0133a8a429e2f1aad3961a0a03ce3e4d495145"
 
       def install
         bin.install "hava"
