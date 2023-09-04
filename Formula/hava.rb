@@ -5,22 +5,22 @@
 class Hava < Formula
   desc "hava is a Go CLI tool to interact with app.hava.io platform."
   homepage "https://github.com/carljavier/hava"
-  version "0.0.7-beta"
+  version "0.0.8-beta"
   license "Apache-2.0"
   depends_on :linux
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/carljavier/hava/releases/download/0.0.7-beta/hava_Linux_arm64.tar.gz"
-      sha256 "8ca223799570bffd9e89b6c96052fa7a5d4f70082e64d5957bf26975b8ed2815"
+    if Hardware::CPU.intel?
+      url "https://github.com/carljavier/hava/releases/download/0.0.8-beta/hava_Linux_x86_64.tar.gz"
+      sha256 "c63bb894c1c6b7901d5883c827f80034b8c882a4c524617635f2292b821ec4cd"
 
       def install
         bin.install "hava"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/carljavier/hava/releases/download/0.0.7-beta/hava_Linux_x86_64.tar.gz"
-      sha256 "f67309850d18427a8eca1cf0f15db92757d04f3eb5cf461ad042bee2bce35762"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/carljavier/hava/releases/download/0.0.8-beta/hava_Linux_arm64.tar.gz"
+      sha256 "bc4a19bde8fcc65a7066399b6f8b437046bfee83eaecad8370510d0fedd04c05"
 
       def install
         bin.install "hava"
