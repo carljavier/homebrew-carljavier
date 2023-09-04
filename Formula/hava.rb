@@ -5,40 +5,22 @@
 class Hava < Formula
   desc "hava is a Go CLI tool to interact with app.hava.io platform."
   homepage "https://github.com/carljavier/hava"
-  version "0.0.3-beta"
+  version "0.0.7-beta"
   license "Apache-2.0"
-
-  on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/carljavier/hava/releases/download/0.0.3-beta/hava_Darwin_x86_64.tar.gz"
-      sha256 "76047a76b6424e2f4673180f1509f06356a3fb68e7557a1f97cfacd73e517a9d"
-
-      def install
-        bin.install "hava"
-      end
-    end
-    if Hardware::CPU.arm?
-      url "https://github.com/carljavier/hava/releases/download/0.0.3-beta/hava_Darwin_arm64.tar.gz"
-      sha256 "8220afce049a3829db69173233315d902b10750959e983368b5075549a3cf1a6"
-
-      def install
-        bin.install "hava"
-      end
-    end
-  end
+  depends_on :linux
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/carljavier/hava/releases/download/0.0.3-beta/hava_Linux_arm64.tar.gz"
-      sha256 "6c0ed64e13ce79731c45b24a60210ac90a3079832220d112ac0f54933ca6dd9c"
+      url "https://github.com/carljavier/hava/releases/download/0.0.7-beta/hava_Linux_arm64.tar.gz"
+      sha256 "8ca223799570bffd9e89b6c96052fa7a5d4f70082e64d5957bf26975b8ed2815"
 
       def install
         bin.install "hava"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/carljavier/hava/releases/download/0.0.3-beta/hava_Linux_x86_64.tar.gz"
-      sha256 "b329592ca5d14585b023ada303a0fe7151e3b22c5eac1d3b97070715af45fcd1"
+      url "https://github.com/carljavier/hava/releases/download/0.0.7-beta/hava_Linux_x86_64.tar.gz"
+      sha256 "f67309850d18427a8eca1cf0f15db92757d04f3eb5cf461ad042bee2bce35762"
 
       def install
         bin.install "hava"
