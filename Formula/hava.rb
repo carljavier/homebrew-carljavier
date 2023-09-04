@@ -5,13 +5,13 @@
 class Hava < Formula
   desc "hava is a Go CLI tool to interact with app.hava.io platform."
   homepage "https://github.com/carljavier/hava"
-  version "0.0.14-beta"
+  version "0.0.15-beta"
   license "Apache-2.0"
   depends_on :macos
 
   on_macos do
-    url "https://github.com/carljavier/hava/releases/download/0.0.14-beta/hava_Darwin_all.tar.gz"
-    sha256 "dbf3c9bd12ed82d2d7df4586431472b2199c1e3e0190d731cffbcadab4ea5f4f"
+    url "https://github.com/carljavier/hava/releases/download/0.0.15-beta/hava_Darwin_all.tar.gz"
+    sha256 "6dfdf5e1a01aed23f85d53e5885ff822c85094961f68ef6bd8c129047debbc28"
 
     def install
       bin.install "hava"
